@@ -1,5 +1,6 @@
 package com.codesnroses.foodo.Fragment;
 
+import android.content.res.TypedArray;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
@@ -22,7 +23,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.codesnroses.foodo.Adapter.NavDrawerListAdapter;
+import com.codesnroses.foodo.Model.NavDrawerItem;
 import com.codesnroses.foodo.R;
+
+import java.util.ArrayList;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -59,6 +64,13 @@ public class NavigationDrawerFragment extends Fragment {
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
+
+
+    //Custom Navigation drawer adapter
+    private NavDrawerListAdapter navAdapter;
+    private ArrayList<NavDrawerItem> navDrawerItems;
+    private String[] navMenuTitles;
+    private TypedArray navMenuIcons;
 
     public NavigationDrawerFragment() {
     }
@@ -99,6 +111,8 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
+
+        /*
         mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_activated_1,
@@ -115,6 +129,31 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_vegetable),
                         getString(R.string.title_gym),
                 }));
+
+        */
+
+        //Get the drawer item's title
+        navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
+
+        //Get the drawer item's icon
+        navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
+
+        navDrawerItems = new ArrayList<NavDrawerItem>();
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[0],navMenuIcons.getResourceId(0,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1],navMenuIcons.getResourceId(1,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2],navMenuIcons.getResourceId(2,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[3],navMenuIcons.getResourceId(3,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4],navMenuIcons.getResourceId(4,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5],navMenuIcons.getResourceId(5,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[6],navMenuIcons.getResourceId(6,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[7],navMenuIcons.getResourceId(7,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[8],navMenuIcons.getResourceId(8,-1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[9],navMenuIcons.getResourceId(9,-1)));
+
+        navAdapter = new NavDrawerListAdapter(getActivity().getApplicationContext(),navDrawerItems);
+
+        mDrawerListView.setAdapter(navAdapter);
+
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
