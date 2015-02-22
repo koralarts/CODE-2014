@@ -38,6 +38,15 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
 
+    private Fragment homeFragment = new HomeFragment();
+    private Fragment fatsFragment = new FatsFragment();
+    private Fragment fruitsFragment = new FruitsFragment();
+    private Fragment meatFragment = new MeatFragment();
+    private Fragment seafoodFragment = new SeafoodFragment();
+    private Fragment seedsFragment = new SeedsFragment();
+    private Fragment sweetsFragment = new SweetsFragment();
+    private Fragment gymFragment = new GymFragment();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,39 +70,39 @@ public class MainActivity extends ActionBarActivity
 
         switch (position) {
             case 0:
-                fragment = new HomeFragment();
+                fragment = homeFragment;
                 mTitle = "Home";
                 break;
             case 1:
-                fragment = new FatsFragment();
+                fragment = fatsFragment;
                 mTitle = "Fats";
                 break;
             case 2:
-                fragment = new FruitsFragment();
+                fragment = fruitsFragment;
                 mTitle = "Fruits";
                 break;
             case 3:
-                fragment = new MeatFragment();
+                fragment = meatFragment;
                 mTitle = "Meats";
                 break;
             case 4:
-                fragment = new SeafoodFragment();
+                fragment = seafoodFragment;
                 mTitle = "Seafood";
                 break;
             case 5:
-                fragment = new SeedsFragment();
+                fragment = seedsFragment;
                 mTitle = "Seeds";
                 break;
             case 6:
-                fragment = new SweetsFragment();
+                fragment = sweetsFragment;
                 mTitle = "Sweets";
                 break;
             case 7:
-                fragment = new GymFragment();
+                fragment = gymFragment;
                 mTitle = getResources().getString(R.string.title_gym);
                 break;
             default:
-                fragment = new HomeFragment();
+                fragment = homeFragment;
                 mTitle = "Home";
                 break;
         }

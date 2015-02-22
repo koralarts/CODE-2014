@@ -1,15 +1,12 @@
 package com.codesnroses.foodo.Fragment;
 
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
-//import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +19,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -42,7 +37,7 @@ import java.util.HashMap;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class GymFragment extends android.support.v4.app.Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, AdapterView.OnItemSelectedListener {
+public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, AdapterView.OnItemSelectedListener {
 
     private static final LatLng CANADA = new LatLng(56.130366, -106.346771);
 
@@ -54,9 +49,10 @@ public class GymFragment extends android.support.v4.app.Fragment implements OnMa
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        this.clubListArray = parseClubList();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (this.clubListArray == null) {
+            this.clubListArray = parseClubList();
+        }
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_gym, container, false);
@@ -67,10 +63,12 @@ public class GymFragment extends android.support.v4.app.Fragment implements OnMa
     {
         super.onDestroyView();
 
-        Fragment fragment = getActivity().getFragmentManager().findFragmentById(R.id.map);
         FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();
-        ft.remove(fragment);
-        ft.commit();
+        android.app.Fragment f = getActivity().getFragmentManager().findFragmentById(R.id.map);
+        if (f != null) {
+            ft.remove(f);
+            ft.commit();
+        }
     }
 
     @Override
@@ -82,10 +80,7 @@ public class GymFragment extends android.support.v4.app.Fragment implements OnMa
         spinner = (Spinner) getActivity().findViewById(R.id.spinner_gender);
         spinner.setOnItemSelectedListener(this);
 
-        if(map == null){
-            initMap();
-        }
-
+        initMap();
     }
 
     private JSONArray parseClubList() {

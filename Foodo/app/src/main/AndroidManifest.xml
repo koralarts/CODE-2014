@@ -29,7 +29,9 @@
 
         <activity
             android:name=".Activity.GymActivity"
-            android:label="@string/title_activity_gym" >
+            android:label="@string/title_activity_gym">
+        </activity>
+
         <activity
             android:name=".Activity.FatsDetail"
             android:parentActivityName=".Activity.MainActivity"
