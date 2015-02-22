@@ -30,6 +30,10 @@
         <activity
             android:name=".Activity.GymActivity"
             android:label="@string/title_activity_gym" >
+        <activity
+            android:name=".Activity.FatsDetail"
+            android:parentActivityName=".Activity.MainActivity"
+            android:label="@string/title_activity_fats_detail" >
         </activity>
     </application>
 

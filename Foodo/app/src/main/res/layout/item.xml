@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/item_food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/header_text"
+        android:text="Name"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp" />
+
+    <TextView
+        android:id="@+id/item_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Calories"
+        android:textColor="@color/body_text"
+        android:layout_below="@+id/item_food_name"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/item_serving_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Serving"
+        android:textColor="@color/body_text"
+        android:layout_below="@+id/item_food_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/item_calories"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"/>
+</RelativeLayout>
+
+

@@ -112,26 +112,6 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-        /*
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                new String[]{
-                        getString(R.string.title_home),
-                        getString(R.string.title_fats),
-                        getString(R.string.title_fruits),
-                        getString(R.string.title_grain),
-                        getString(R.string.title_meat),
-                        getString(R.string.title_seafood),
-                        getString(R.string.title_seeds),
-                        getString(R.string.title_sweets),
-                        getString(R.string.title_vegetable),
-                        getString(R.string.title_gym),
-                }));
-
-        */
-
         //Get the drawer item's title
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
@@ -147,8 +127,6 @@ public class NavigationDrawerFragment extends Fragment {
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[5],navMenuIcons.getResourceId(5,-1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[6],navMenuIcons.getResourceId(6,-1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[7],navMenuIcons.getResourceId(7,-1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[8],navMenuIcons.getResourceId(8,-1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[9],navMenuIcons.getResourceId(9,-1)));
 
         navAdapter = new NavDrawerListAdapter(getActivity().getApplicationContext(),navDrawerItems);
 
@@ -294,12 +272,6 @@ public class NavigationDrawerFragment extends Fragment {
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
-
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 

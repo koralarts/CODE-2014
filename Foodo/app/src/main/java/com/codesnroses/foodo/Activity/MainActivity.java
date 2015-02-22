@@ -15,24 +15,18 @@ import android.support.v4.widget.DrawerLayout;
 
 import com.codesnroses.foodo.Fragment.FatsFragment;
 import com.codesnroses.foodo.Fragment.FruitsFragment;
-import com.codesnroses.foodo.Fragment.GrainFragment;
 import com.codesnroses.foodo.Fragment.GymFragment;
 import com.codesnroses.foodo.Fragment.HomeFragment;
 import com.codesnroses.foodo.Fragment.MeatFragment;
 import com.codesnroses.foodo.Fragment.SeafoodFragment;
 import com.codesnroses.foodo.Fragment.SeedsFragment;
 import com.codesnroses.foodo.Fragment.SweetsFragment;
-import com.codesnroses.foodo.Fragment.VegetableFragment;
 import com.codesnroses.foodo.Fragment.NavigationDrawerFragment;
 import com.codesnroses.foodo.R;
 
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-
-
-
-
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -51,7 +45,6 @@ public class MainActivity extends ActionBarActivity
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        //mTitle = getTitle();
         mTitle = "Home"; //Default
 
         // Set up the drawer.
@@ -80,30 +73,22 @@ public class MainActivity extends ActionBarActivity
                 mTitle = "Fruits";
                 break;
             case 3:
-                fragment = new GrainFragment();
-                mTitle = "Grains";
-                break;
-            case 4:
                 fragment = new MeatFragment();
                 mTitle = "Meats";
                 break;
-            case 5:
+            case 4:
                 fragment = new SeafoodFragment();
                 mTitle = "Seafood";
                 break;
-            case 6:
+            case 5:
                 fragment = new SeedsFragment();
                 mTitle = "Seeds";
                 break;
-            case 7:
+            case 6:
                 fragment = new SweetsFragment();
                 mTitle = "Sweets";
                 break;
-            case 8:
-                fragment = new VegetableFragment();
-                mTitle = "Vegetables";
-                break;
-            case 9:
+            case 7:
                 fragment = new GymFragment();
                 mTitle = "Gym";
                 break;
@@ -116,26 +101,6 @@ public class MainActivity extends ActionBarActivity
         fragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)
                 .commit();
-
-        /*
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
-        */
-    }
-
-    public void onSectionAttached(int number) {
-        switch (number) {
-            case 1:
-                mTitle = getString(R.string.title_home);
-                break;
-            case 2:
-                mTitle = getString(R.string.title_fruits);
-                break;
-            case 3:
-                mTitle = getString(R.string.title_gym);
-                break;
-        }
     }
 
     public void restoreActionBar() {
@@ -144,7 +109,6 @@ public class MainActivity extends ActionBarActivity
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -173,47 +137,4 @@ public class MainActivity extends ActionBarActivity
 
         return super.onOptionsItemSelected(item);
     }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
-
-
 }
