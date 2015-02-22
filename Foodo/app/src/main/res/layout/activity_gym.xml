@@ -17,55 +17,79 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="70">
+        android:layout_weight="70"
+        android:layout_margin="10dp">
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             android:background="@color/list_divider"
-            android:layout_margin="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/gym_name"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/header_text"/>
 
         <TextView
             android:id="@+id/gym_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/list_divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/gym_address"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/header_text"/>
 
         <TextView
             android:id="@+id/gym_address"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/list_divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/gym_phone"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/header_text"/>
 
         <TextView
             android:id="@+id/gym_phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/list_divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/gym_gender"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/header_text"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,6 +111,13 @@
                 android:visibility="gone"/>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/list_divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
 

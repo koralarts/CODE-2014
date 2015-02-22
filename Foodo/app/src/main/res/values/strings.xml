@@ -10,7 +10,7 @@
     <string name="title_seeds">Seeds</string>
     <string name="title_sweets">Sweets</string>
     <string name="title_vegetable">Vegetable</string>
-    <string name="title_gym">Gym</string>
+    <string name="title_gym">Gym Locations</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -66,9 +66,9 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="title_activity_gym">GymActivity</string>
-    <string name="province_prompt">Filter on Province</string>
-    <string name="gender_prompt">Filter on Gender</string>
+    <string name="title_activity_gym">Gym Details</string>
+    <string name="province_prompt">Filter by Province</string>
+    <string name="gender_prompt">Filter by Gender</string>
     <string name="gym_details">Click here for more details</string>
     <string name="gym_name">Name</string>
     <string name="gym_address">Address</string>

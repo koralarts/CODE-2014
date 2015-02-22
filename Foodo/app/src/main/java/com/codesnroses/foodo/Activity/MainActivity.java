@@ -105,7 +105,7 @@ public class MainActivity extends ActionBarActivity
                 break;
             case 9:
                 fragment = new GymFragment();
-                mTitle = "Gym";
+                mTitle = getResources().getString(R.string.title_gym);
                 break;
             default:
                 fragment = new HomeFragment();

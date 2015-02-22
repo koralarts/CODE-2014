@@ -21,6 +21,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -134,7 +136,9 @@ public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleM
                 Marker marker = this.map.addMarker(new MarkerOptions()
                         .title(title)
                         .snippet(getResources().getString(R.string.gym_details))
-                        .position(new LatLng(lat, lng)));
+                        .position(new LatLng(lat, lng))
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
                 this.markerMap.put(marker, club);
             } catch (JSONException e) {
                 Log.d("JSON Exception", e.toString());

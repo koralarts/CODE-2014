@@ -16,6 +16,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -106,7 +107,8 @@ public class GymActivity extends ActionBarActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap map) {
         Marker marker = map.addMarker(new MarkerOptions()
                 .title(this.name)
-                .position(new LatLng(this.latitude, this.longitude)));
+                .position(new LatLng(this.latitude, this.longitude))
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
         marker.showInfoWindow();
 
