@@ -90,5 +90,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_game">Game</string>
+    <string name="sort_list">Sort by</string>
+    <string-array name="sort_array">
+        <item>A-Z</item>
+        <item>Z-A</item>
+        <item>Calories (Low to High)</item>
+        <item>Calories (High to Low)</item>
+    </string-array>
 
 </resources>

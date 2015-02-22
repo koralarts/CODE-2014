@@ -15,7 +15,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:prompt="@string/province_prompt"
-            android:entries="@array/province_array"/>
+            android:entries="@array/province_array"
+            android:padding="5dp"/>
 
         <Spinner
             android:id="@+id/spinner_gender"
@@ -23,7 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:prompt="@string/gender_prompt"
-            android:entries="@array/gender_array"/>
+            android:entries="@array/gender_array"
+            android:padding="5dp"/>
 
     </LinearLayout>
 
