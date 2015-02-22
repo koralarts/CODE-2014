@@ -24,6 +24,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.codesnroses.foodo.Adapter.NavDrawerListAdapter;
+import com.codesnroses.foodo.Etc.CurrentFragment;
 import com.codesnroses.foodo.Model.NavDrawerItem;
 import com.codesnroses.foodo.R;
 
@@ -88,6 +89,8 @@ public class NavigationDrawerFragment extends Fragment {
             mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
             mFromSavedInstanceState = true;
         }
+
+        mCurrentSelectedPosition = CurrentFragment.getInstance().getFragmentIndex();
 
         // Select either the default item (0) or the last selected item.
         selectItem(mCurrentSelectedPosition);

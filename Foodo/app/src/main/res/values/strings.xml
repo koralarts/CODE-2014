@@ -89,5 +89,6 @@
     <string name="title_activity_fats_detail">FatsDetail</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_game">Game</string>
 
 </resources>

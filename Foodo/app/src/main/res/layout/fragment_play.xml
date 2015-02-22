@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_weight="0.20"
+        android:layout_weight="0.15"
         android:orientation="vertical">
 
         <TextView
@@ -21,22 +21,11 @@
             android:id="@+id/achievements_title"
             android:layout_gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Streak : 5/10"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:id="@+id/streak_amount"
-            android:layout_gravity="right" />
     </LinearLayout>
     <LinearLayout
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_weight="0.7"
+        android:layout_weight="0.75"
         android:orientation="vertical">
         <View
             android:layout_width="fill_parent"

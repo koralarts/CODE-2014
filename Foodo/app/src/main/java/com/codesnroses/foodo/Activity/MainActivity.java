@@ -1,32 +1,22 @@
 package com.codesnroses.foodo.Activity;
 
-import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.provider.Settings.Secure;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.NetworkResponse;
-import com.android.volley.ParseError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.HttpHeaderParser;
-import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.codesnroses.foodo.Etc.AppController;
 import com.codesnroses.foodo.Fragment.FatsFragment;
 import com.codesnroses.foodo.Fragment.FruitsFragment;
 import com.codesnroses.foodo.Fragment.GymFragment;
@@ -37,14 +27,9 @@ import com.codesnroses.foodo.Fragment.SeafoodFragment;
 import com.codesnroses.foodo.Fragment.SeedsFragment;
 import com.codesnroses.foodo.Fragment.SweetsFragment;
 import com.codesnroses.foodo.Fragment.NavigationDrawerFragment;
+import com.codesnroses.foodo.Etc.CurrentFragment;
 import com.codesnroses.foodo.R;
-import com.android.volley.Request.Method;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -135,42 +120,63 @@ public class MainActivity extends ActionBarActivity
             case 0:
                 fragment = homeFragment;
                 mTitle = getResources().getString(R.string.title_home);
+
+                CurrentFragment.getInstance().setFragmentIndex(0);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             case 1:
                 fragment = fatsFragment;
                 mTitle = getResources().getString(R.string.title_fats);
+                CurrentFragment.getInstance().setFragmentIndex(1);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             case 2:
                 fragment = fruitsFragment;
                 mTitle = getResources().getString(R.string.title_fruits);
+                CurrentFragment.getInstance().setFragmentIndex(2);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             case 3:
                 fragment = meatFragment;
                 mTitle = getResources().getString(R.string.title_meat);
+                CurrentFragment.getInstance().setFragmentIndex(3);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             case 4:
                 fragment = seafoodFragment;
                 mTitle = getResources().getString(R.string.title_seafood);
+                CurrentFragment.getInstance().setFragmentIndex(4);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             case 5:
                 fragment = seedsFragment;
                 mTitle = getResources().getString(R.string.title_seeds);
+                CurrentFragment.getInstance().setFragmentIndex(5);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             case 6:
                 fragment = sweetsFragment;
                 mTitle = getResources().getString(R.string.title_sweets);
+                CurrentFragment.getInstance().setFragmentIndex(6);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             case 7:
                 fragment = gymFragment;
                 mTitle = getResources().getString(R.string.title_gym);
+                CurrentFragment.getInstance().setFragmentIndex(7);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             case 8:
                 fragment = playFragment;
                 mTitle = getResources().getString(R.string.title_play);
+                CurrentFragment.getInstance().setFragmentIndex(8);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
             default:
                 fragment = homeFragment;
                 mTitle = getResources().getString(R.string.title_home);
+                CurrentFragment.getInstance().setFragmentIndex(0);
+                Log.d("BACK TEST",""+CurrentFragment.getInstance().getFragmentIndex());
                 break;
         }
 

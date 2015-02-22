@@ -9,15 +9,15 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name=".Etc.CurrentFragment"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name="com.codesnroses.foodo.Etc.AppController">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".Activity.MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,13 +32,22 @@
         <activity
             android:name=".Activity.GymActivity"
             android:label="@string/title_activity_gym"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Activity.FatsDetail"
-            android:parentActivityName=".Activity.MainActivity"
             android:label="@string/title_activity_fats_detail"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Activity.Game"
+            android:label="@string/title_activity_game"
+            android:parentActivityName=".Activity.MainActivity"
             android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codesnroses.foodo.Activity.MainActivity" />
         </activity>
     </application>
 
