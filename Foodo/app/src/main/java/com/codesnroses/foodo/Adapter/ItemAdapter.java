@@ -61,7 +61,7 @@ public class ItemAdapter extends BaseAdapter {
 
         //Set Serving size
         TextView servingSize = (TextView) convertView.findViewById(R.id.item_serving_size);
-        servingSize.setText("Portion : "+i.getMeasure());
+        servingSize.setText("Portion : "+i.getMeasure().toLowerCase());
 
         //Set calories
         TextView calories = (TextView) convertView.findViewById(R.id.item_calories);

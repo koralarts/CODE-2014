@@ -4,18 +4,14 @@
     <string name="title_home">Home</string>
     <string name="title_fats">Fat and Oil</string>
     <string name="title_fruits">Fruits</string>
-    <string name="title_grain">Grain</string>
     <string name="title_meat">Meat</string>
     <string name="title_seafood">Seafood</string>
     <string name="title_seeds">Seeds</string>
     <string name="title_sweets">Sweets</string>
-    <string name="title_vegetable">Vegetable</string>
     <string name="title_gym">Gym</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
 
@@ -31,21 +27,15 @@
     <string name="hello_vegetable_fragment">Hello vegetable fragment</string>
     <string name="hello_gym_fragment">Hello gym fragment</string>
 
-
-    <!-- API KEY to namara -->
-    <string name="API_KEY_NAMARA">303a47359480f5bb640a4dce99383092b983137b8128f86b1633b934a8368252</string>
-
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item>Home</item>
         <item>Fats</item>
         <item>Fruits</item>
-        <item>Grains</item>
         <item>Meat</item>
         <item>Seafood</item>
         <item>Seeds</item>
         <item>Sweets</item>
-        <item>Vegetable</item>
         <item>Gym</item>
     </string-array>
 
@@ -55,12 +45,10 @@
         <item>@drawable/ic_home</item>
         <item>@drawable/ic_fat</item>
         <item>@drawable/ic_fruits</item>
-        <item>@drawable/ic_grains</item>
         <item>@drawable/ic_meat</item>
         <item>@drawable/ic_seafood</item>
         <item>@drawable/ic_seeds</item>
         <item>@drawable/ic_sweets</item>
-        <item>@drawable/ic_vegetable</item>
         <item>@drawable/ic_gym</item>
     </array>
 

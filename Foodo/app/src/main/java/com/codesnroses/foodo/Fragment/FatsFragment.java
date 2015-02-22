@@ -2,30 +2,28 @@ package com.codesnroses.foodo.Fragment;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 //import android.app.Fragment;
 import android.os.Debug;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
-import com.codesnroses.foodo.Activity.VolleyApplication;
+
+import com.codesnroses.foodo.Activity.FatsDetail;
 import com.codesnroses.foodo.Adapter.ItemAdapter;
-import com.codesnroses.foodo.Etc.Utils;
 import com.codesnroses.foodo.Model.Fats;
 import com.codesnroses.foodo.R;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,20 +32,21 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FatsFragment extends Fragment {
-    //private final String API_KEY = getResources().getString(R.string.API_KEY_NAMARA);
-    private final String API_KEY = "303a47359480f5bb640a4dce99383092b983137b8128f86b1633b934a8368252";
+public class FatsFragment extends Fragment{
 
-    private final String FATS_URL = "http://api.namara.io/v0/data_sets/824b11d2-43d6-405b-b9b4-ffba23334876/data/en-0?api_key=";
-    private final String OFFSET = "&offset=0&limit=10";
+    private ItemAdapter itemAdapter;
 
     private View rootView;
     private ArrayList<Fats> fList = new ArrayList<Fats>();
+
+    private int AtoZToggle = 0; //0 = No sort, 1 = Sorting A to Z, 2 = Sorting Z to A
+    private int CalorieToggle = 0; //0 = No sort, 1 = Sorting lowest to highest, 2 = Sorting highest to lowest
 
     public FatsFragment() {
         // Required empty public constructor
@@ -63,9 +62,60 @@ public class FatsFragment extends Fragment {
 
         putFatsObjectIntoList();
 
+        catchSort();
+
         return rootView;
     }
 
+    //Sorting buttons
+    public void catchSort(){
+        Button AtoZButton = (Button)rootView.findViewById(R.id.AtoZSortButton);
+        Button CalorieButton = (Button)rootView.findViewById(R.id.CaloriesSortButton);
+
+        AtoZButton.setOnClickListener(new View.OnClickListener() {
+            TextView t = (TextView)rootView.findViewById(R.id.AtoZSortButton);
+            @Override
+            public void onClick(View v) {
+                if(AtoZToggle == 0){
+                    Collections.sort(fList,Fats.FatComparatorAtoZ);
+                    AtoZToggle = 1;
+                    t.setText("Z-A");
+                }else if(AtoZToggle == 1){
+                    Collections.sort(fList,Fats.FatComparatorZtoA);
+                    AtoZToggle = 2;
+                    t.setText("A-Z");
+                }else if(AtoZToggle == 2){
+                    Collections.sort(fList,Fats.FatComparatorAtoZ);
+                    AtoZToggle = 1;
+                    t.setText("Z-A");
+                }
+
+                itemAdapter.notifyDataSetChanged();
+            }
+        });
+
+        CalorieButton.setOnClickListener(new View.OnClickListener() {
+            TextView c = (TextView)rootView.findViewById(R.id.CaloriesSortButton);
+            @Override
+            public void onClick(View v) {
+                if(CalorieToggle == 0){
+                    Collections.sort(fList,Fats.FatComparatorCalDown);
+                    CalorieToggle = 1;
+                    c.setText("Calories (Low to High)");
+                }else if(CalorieToggle == 1){
+                    Collections.sort(fList,Fats.FatComparatorCalUp);
+                    CalorieToggle = 2;
+                    c.setText("Calories (High to Low)");
+                }else if(CalorieToggle == 2){
+                    Collections.sort(fList,Fats.FatComparatorCalDown);
+                    CalorieToggle = 1;
+                    c.setText("Calories (Low to High)");
+                }
+
+                itemAdapter.notifyDataSetChanged();
+            }
+        });
+    }
 
     public void putFatsObjectIntoList(){
         JSONArray fatObjects = getFatObjects();
@@ -79,6 +129,24 @@ public class FatsFragment extends Fragment {
                 f.setMeasure(((JSONObject) fatObjects.get(i)).getString("measure"));
                 f.setWeight_g(((JSONObject) fatObjects.get(i)).getDouble("weight_g"));
                 f.setEnergy_kcal(((JSONObject) fatObjects.get(i)).getDouble("energy_kcal"));
+                f.setEnergy_kj(((JSONObject) fatObjects.get(i)).getDouble("energy_kj"));
+                f.setProtein_g(((JSONObject) fatObjects.get(i)).getDouble("protein_g"));
+                f.setCarbohydrate_g(((JSONObject) fatObjects.get(i)).getDouble("carbohydrate_g"));
+                f.setTotal_fat_g(((JSONObject) fatObjects.get(i)).getDouble("total_fat_g"));
+                f.setSaturated_fat_g(((JSONObject) fatObjects.get(i)).getDouble("saturated_fat_g"));
+                f.setMonounsaturated_fat_g(((JSONObject) fatObjects.get(i)).getDouble("monounsaturated_fat_g"));
+                f.setPolyunsaturated_fat_g(((JSONObject) fatObjects.get(i)).getDouble("polyunsaturated_fat_g"));
+                f.setTrans_fat_g(((JSONObject) fatObjects.get(i)).getDouble("trans_fat_g"));
+                f.setCholesterol_mg(((JSONObject) fatObjects.get(i)).getDouble("cholesterol_mg"));
+                f.setCalcium_mg(((JSONObject) fatObjects.get(i)).getDouble("calcium_mg"));
+                f.setIron_mg(((JSONObject) fatObjects.get(i)).getDouble("iron_mg"));
+                f.setSodium_mg(((JSONObject) fatObjects.get(i)).getDouble("sodium_mg"));
+                f.setPotassium_mg(((JSONObject) fatObjects.get(i)).getDouble("potassium_mg"));
+                f.setMagnesium_mg(((JSONObject) fatObjects.get(i)).getDouble("magnesium_mg"));
+                f.setPhosphorus_mg(((JSONObject) fatObjects.get(i)).getDouble("phosphorus_mg"));
+                f.setVitamin_a(((JSONObject) fatObjects.get(i)).getDouble("vitamin_a"));
+                f.setVitamin_e_mg(((JSONObject) fatObjects.get(i)).getDouble("vitamin_e_mg"));
+                f.setBeta_carotene_g(((JSONObject) fatObjects.get(i)).getDouble("beta_carotene_g"));
                 fList.add(f);
             }
         }catch(JSONException e){
@@ -87,25 +155,27 @@ public class FatsFragment extends Fragment {
         }
 
         //Put all Fats object into the list View
-        ItemAdapter itemAdapter = new ItemAdapter(getActivity(),fList);
+        itemAdapter = new ItemAdapter(getActivity(),fList);
 
         //Set adapter for the list view
         ListView myItemList = (ListView)rootView.findViewById(R.id.listView_fats);
 
-        myItemList.setAdapter(itemAdapter);
 
+        myItemList.setAdapter(itemAdapter);
+        itemAdapter.notifyDataSetChanged();
 
         myItemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Fats f = (Fats) adapterView.getItemAtPosition(i);
 
-                String foodName = f.getFood_name();
+                Intent intent = new Intent(rootView.getContext(), FatsDetail.class);
 
-                Toast.makeText(getActivity().getApplicationContext(), "You clicked on " + foodName, Toast.LENGTH_SHORT).show();
+                String selectedFatsJson = new Gson().toJson(f);
+                intent.putExtra("SelectedItem",selectedFatsJson);
+                startActivity(intent);
             }
         });
-
     }
 
     /**
@@ -147,4 +217,5 @@ public class FatsFragment extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
     }
+
 }

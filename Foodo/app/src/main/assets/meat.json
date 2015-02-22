@@ -88,7 +88,7 @@
     "sodium_mg": 45.0,
     "potassium_mg": 241.0,
     "magnesium_mg": 20.0,
-    "phosphorus_mg": null,
+    "phosphorus_mg": 0.0,
     "vitamin_a": 20.0,
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.24,
@@ -112,7 +112,7 @@
     "sodium_mg": 66.0,
     "potassium_mg": 179.0,
     "magnesium_mg": 18.0,
-    "phosphorus_mg": null,
+    "phosphorus_mg": 0.0,
     "vitamin_a": 15.0,
     "vitamin_d_g": 0.1,
     "vitamin_b12_g": 0.23,
@@ -131,17 +131,17 @@
     "saturated_fat_g": 1.0,
     "monounsaturated_fat_g": 1.4,
     "polyunsaturated_fat_g": 0.4,
-    "cholesterol_mg": null,
+    "cholesterol_mg": 0.0,
     "iron_mg": 7.4,
     "sodium_mg": 40.0,
     "potassium_mg": 197.0,
     "magnesium_mg": 23.0,
     "phosphorus_mg": 187.0,
     "vitamin_a": 12.0,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "folate": null,
-    "vitamin_e_mg": null
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "GOOSE, WILD (CANADA GOOSE), FLESH, ROASTED",
@@ -165,7 +165,7 @@
     "vitamin_d_g": 0.1,
     "vitamin_b12_g": 0.37,
     "folate": 9.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "TURKEY, GROUND, COOKED",
@@ -234,7 +234,7 @@
     "magnesium_mg": 23.0,
     "phosphorus_mg": 188.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 4.73,
     "folate": 3.0,
     "vitamin_e_mg": 0.2
@@ -381,7 +381,7 @@
     "vitamin_d_g": 0.5,
     "vitamin_b12_g": 2.16,
     "folate": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "LEG, LEAN AND FAT, ROASTED",
@@ -501,7 +501,7 @@
     "vitamin_d_g": 0.1,
     "vitamin_b12_g": 6.23,
     "folate": 8.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "LIVER, BEEF, PAN-FRIED",
@@ -573,7 +573,7 @@
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.15,
     "folate": 2.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "DELI MEAT, HAM, EXTRA LEAN (5% FAT)",
@@ -669,7 +669,7 @@
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.84,
     "folate": 16.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SAUSAGE, PORK AND BEEF, COOKED",
@@ -789,7 +789,7 @@
     "vitamin_d_g": 0.6,
     "vitamin_b12_g": 1.88,
     "folate": 6.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "OUTSIDE (BOTTOM) ROUND STEAK, LEAN + FAT, BRAISED",
@@ -825,8 +825,8 @@
     "carbohydrate_g": 0.0,
     "total_fat_g": 7.0,
     "saturated_fat_g": 2.9,
-    "monounsaturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
+    "monounsaturated_fat_g": 0.0,
+    "polyunsaturated_fat_g": 0.0,
     "cholesterol_mg": 68.0,
     "iron_mg": 2.6,
     "sodium_mg": 45.0,
@@ -884,7 +884,7 @@
     "vitamin_a": 0.0,
     "vitamin_d_g": 0.5,
     "vitamin_b12_g": 2.46,
-    "folate": null,
+    "folate": 0.0,
     "vitamin_e_mg": 0.3
   },
   {
@@ -957,7 +957,7 @@
     "vitamin_d_g": 0.6,
     "vitamin_b12_g": 0.68,
     "folate": 3.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "VEAL, AMERICAN, FRESH, LEG, WHOLE, LEAN + FAT, COOKED",
@@ -1024,7 +1024,7 @@
     "sodium_mg": 56.0,
     "potassium_mg": 301.0,
     "magnesium_mg": 22.0,
-    "phosphorus_mg": null,
+    "phosphorus_mg": 0.0,
     "vitamin_a": 5.0,
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.26,
@@ -1077,7 +1077,7 @@
     "vitamin_d_g": 0.1,
     "vitamin_b12_g": 0.37,
     "folate": 9.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "PTARMIGAN, FLESH COOKED",
@@ -1088,20 +1088,20 @@
     "protein_g": 23.0,
     "carbohydrate_g": 0.0,
     "total_fat_g": 2.0,
-    "saturated_fat_g": null,
-    "monounsaturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
-    "cholesterol_mg": null,
+    "saturated_fat_g": 0.0,
+    "monounsaturated_fat_g": 0.0,
+    "polyunsaturated_fat_g": 0.0,
+    "cholesterol_mg": 0.0,
     "iron_mg": 6.5,
     "sodium_mg": 37.0,
     "potassium_mg": 247.0,
     "magnesium_mg": 27.0,
     "phosphorus_mg": 190.0,
-    "vitamin_a": null,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "folate": null,
-    "vitamin_e_mg": null
+    "vitamin_a": 0.0,
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "TURKEY, LIGHT MEAT AND SKIN, ROASTED",
@@ -1125,7 +1125,7 @@
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.27,
     "folate": 5.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "DEER (VENISON), ROASTED",
@@ -1146,10 +1146,10 @@
     "magnesium_mg": 18.0,
     "phosphorus_mg": 170.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "folate": null,
-    "vitamin_e_mg": null
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "NARWHAL SKIN (MUKTUK), RAW",
@@ -1163,17 +1163,17 @@
     "saturated_fat_g": 0.6,
     "monounsaturated_fat_g": 2.7,
     "polyunsaturated_fat_g": 0.3,
-    "cholesterol_mg": null,
+    "cholesterol_mg": 0.0,
     "iron_mg": 0.3,
     "sodium_mg": 91.0,
     "potassium_mg": 332.0,
     "magnesium_mg": 14.0,
     "phosphorus_mg": 146.0,
     "vitamin_a": 126.0,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "folate": null,
-    "vitamin_e_mg": null
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SEAL MEAT, BOILED",
@@ -1194,10 +1194,10 @@
     "magnesium_mg": 20.0,
     "phosphorus_mg": 139.0,
     "vitamin_a": 11.0,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "folate": null,
-    "vitamin_e_mg": null
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "LIVER, CHICKEN, PAN-FRIED",
@@ -1218,7 +1218,7 @@
     "magnesium_mg": 20.0,
     "phosphorus_mg": 332.0,
     "vitamin_a": 3972.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 15.85,
     "folate": 420.0,
     "vitamin_e_mg": 0.6
@@ -1485,7 +1485,7 @@
     "vitamin_d_g": 0.8,
     "vitamin_b12_g": 2.72,
     "folate": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "BEEF, RIB EYE STEAK, LEAN + FAT, BROILED",
@@ -1533,7 +1533,7 @@
     "vitamin_d_g": 0.3,
     "vitamin_b12_g": 2.27,
     "folate": 7.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "BEEF, STRIP LOIN (NEW YORK) STEAK, LEAN + FAT, BROILED",
@@ -1604,7 +1604,7 @@
     "vitamin_a": 0.0,
     "vitamin_d_g": 0.7,
     "vitamin_b12_g": 2.5,
-    "folate": null,
+    "folate": 0.0,
     "vitamin_e_mg": 0.4
   },
   {
@@ -1808,20 +1808,20 @@
     "protein_g": 20.0,
     "carbohydrate_g": 0.0,
     "total_fat_g": 2.0,
-    "saturated_fat_g": null,
-    "monounsaturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
-    "cholesterol_mg": null,
+    "saturated_fat_g": 0.0,
+    "monounsaturated_fat_g": 0.0,
+    "polyunsaturated_fat_g": 0.0,
+    "cholesterol_mg": 0.0,
     "iron_mg": 3.3,
     "sodium_mg": 38.0,
     "potassium_mg": 204.0,
     "magnesium_mg": 25.0,
     "phosphorus_mg": 152.0,
-    "vitamin_a": null,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "folate": null,
-    "vitamin_e_mg": null
+    "vitamin_a": 0.0,
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "TURKEY, LIGHT MEAT, ROASTED",
@@ -1845,7 +1845,7 @@
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.29,
     "folate": 5.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "EMU, INSIDE DRUM, BROILED",
@@ -1866,7 +1866,7 @@
     "magnesium_mg": 25.0,
     "phosphorus_mg": 230.0,
     "vitamin_a": 2.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 1.8,
     "folate": 8.0,
     "vitamin_e_mg": 0.2
@@ -1890,7 +1890,7 @@
     "magnesium_mg": 20.0,
     "phosphorus_mg": 190.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 4.83,
     "folate": 12.0,
     "vitamin_e_mg": 0.2
@@ -2001,18 +2001,18 @@
     "carbohydrate_g": 2.0,
     "total_fat_g": 12.0,
     "saturated_fat_g": 7.4,
-    "monounsaturated_fat_g": null,
+    "monounsaturated_fat_g": 0.0,
     "polyunsaturated_fat_g": 1.7,
     "cholesterol_mg": 33.0,
-    "iron_mg": null,
+    "iron_mg": 0.0,
     "sodium_mg": 536.0,
     "potassium_mg": 129.0,
-    "magnesium_mg": null,
-    "phosphorus_mg": null,
+    "magnesium_mg": 0.0,
+    "phosphorus_mg": 0.0,
     "vitamin_a": 0.0,
     "vitamin_d_g": 0.4,
-    "vitamin_b12_g": null,
-    "folate": null,
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
     "vitamin_e_mg": 0.1
   },
   {
@@ -2253,7 +2253,7 @@
     "vitamin_d_g": 1.7,
     "vitamin_b12_g": 1.97,
     "folate": 4.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "T-BONE (PORTERHOUSE) STEAK, LEAN + FAT, BROILED",
@@ -2349,7 +2349,7 @@
     "vitamin_d_g": 0.8,
     "vitamin_b12_g": 0.83,
     "folate": 2.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "LEG, BUTT END, LEAN + FAT, ROASTED",
@@ -2374,30 +2374,6 @@
     "vitamin_b12_g": 0.47,
     "folate": 8.0,
     "vitamin_e_mg": 0.1
-  },
-  {
-    "food_name": "LAMB",
-    "measure": null,
-    "weight_g": null,
-    "energy_kcal": null,
-    "energy_kj": null,
-    "protein_g": null,
-    "carbohydrate_g": null,
-    "total_fat_g": null,
-    "saturated_fat_g": null,
-    "monounsaturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
-    "cholesterol_mg": null,
-    "iron_mg": null,
-    "sodium_mg": null,
-    "potassium_mg": null,
-    "magnesium_mg": null,
-    "phosphorus_mg": null,
-    "vitamin_a": null,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "folate": null,
-    "vitamin_e_mg": null
   },
   {
     "food_name": "AMERICAN (LAMB), FRESH, RIB, LEAN + FAT, COOKED",
@@ -2464,7 +2440,7 @@
     "sodium_mg": 71.0,
     "potassium_mg": 185.0,
     "magnesium_mg": 18.0,
-    "phosphorus_mg": null,
+    "phosphorus_mg": 0.0,
     "vitamin_a": 14.0,
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.26,
@@ -2504,20 +2480,20 @@
     "protein_g": 16.0,
     "carbohydrate_g": 0.0,
     "total_fat_g": 9.0,
-    "saturated_fat_g": null,
-    "monounsaturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
+    "saturated_fat_g": 0.0,
+    "monounsaturated_fat_g": 0.0,
+    "polyunsaturated_fat_g": 0.0,
     "cholesterol_mg": 59.0,
     "iron_mg": 1.2,
     "sodium_mg": 51.0,
     "potassium_mg": 212.0,
-    "magnesium_mg": null,
-    "phosphorus_mg": null,
+    "magnesium_mg": 0.0,
+    "phosphorus_mg": 0.0,
     "vitamin_a": 9.0,
     "vitamin_d_g": 0.2,
-    "vitamin_b12_g": null,
-    "folate": null,
-    "vitamin_e_mg": null
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "TURKEY, DARK MEAT AND SKIN, ROASTED",
@@ -2541,7 +2517,7 @@
     "vitamin_d_g": 0.5,
     "vitamin_b12_g": 0.28,
     "folate": 7.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "BEAVER, ROASTED",
@@ -2561,8 +2537,8 @@
     "potassium_mg": 255.0,
     "magnesium_mg": 17.0,
     "phosphorus_mg": 135.0,
-    "vitamin_a": null,
-    "vitamin_d_g": null,
+    "vitamin_a": 0.0,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 6.23,
     "folate": 8.0,
     "vitamin_e_mg": 0.3
@@ -2586,7 +2562,7 @@
     "magnesium_mg": 0.0,
     "phosphorus_mg": 151.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 0.89,
     "folate": 4.0,
     "vitamin_e_mg": 0.3
@@ -2634,7 +2610,7 @@
     "magnesium_mg": 18.0,
     "phosphorus_mg": 470.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 2.14,
     "folate": 15.0,
     "vitamin_e_mg": 0.1
@@ -2805,7 +2781,7 @@
     "vitamin_d_g": 0.5,
     "vitamin_b12_g": 3.08,
     "folate": 1.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "BLADE STEAK, LEAN + FAT, BRAISED",
@@ -2877,7 +2853,7 @@
     "vitamin_d_g": 0.3,
     "vitamin_b12_g": 2.06,
     "folate": 5.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "INSIDE (TOP) ROUND STEAK, LEAN + FAT, BRAISED",
@@ -3165,7 +3141,7 @@
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.29,
     "folate": 8.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "BEAR, SIMMERED",
@@ -3186,7 +3162,7 @@
     "magnesium_mg": 17.0,
     "phosphorus_mg": 128.0,
     "vitamin_a": 14.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 1.85,
     "folate": 5.0,
     "vitamin_e_mg": 0.4
@@ -3210,7 +3186,7 @@
     "magnesium_mg": 20.0,
     "phosphorus_mg": 157.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 2.15,
     "folate": 6.0,
     "vitamin_e_mg": 0.3
@@ -3234,10 +3210,10 @@
     "magnesium_mg": 19.0,
     "phosphorus_mg": 185.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 2.37,
-    "folate": null,
-    "vitamin_e_mg": null
+    "folate": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "KIDNEY, BEEF SIMMERED",
@@ -3282,8 +3258,8 @@
     "magnesium_mg": 11.0,
     "phosphorus_mg": 137.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
     "folate": 4.0,
     "vitamin_e_mg": 0.3
   },
@@ -3333,7 +3309,7 @@
     "vitamin_d_g": 0.3,
     "vitamin_b12_g": 0.15,
     "folate": 4.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "DELI MEAT, CHICKEN BREAST, LOW FAT",
@@ -3355,8 +3331,8 @@
     "phosphorus_mg": 143.0,
     "vitamin_a": 0.0,
     "vitamin_d_g": 0.0,
-    "vitamin_b12_g": null,
-    "folate": null,
+    "vitamin_b12_g": 0.0,
+    "folate": 0.0,
     "vitamin_e_mg": 0.0
   },
   {
@@ -3429,6 +3405,6 @@
     "vitamin_d_g": 0.2,
     "vitamin_b12_g": 0.99,
     "folate": 4.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   }
 ]

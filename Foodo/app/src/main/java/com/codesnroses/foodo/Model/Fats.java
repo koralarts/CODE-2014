@@ -1,5 +1,7 @@
 package com.codesnroses.foodo.Model;
 
+import java.util.Comparator;
+
 /**
  * Created by Zhan on 15-02-21.
  */
@@ -331,4 +333,48 @@ public class Fats {
     public double getTotal_daietary_fibre_g() {
         return total_daietary_fibre_g;
     }
+
+    //Comparator A to Z
+    public static Comparator<Fats> FatComparatorAtoZ = new Comparator<Fats>(){
+        public int compare(Fats f1, Fats f2){
+            String Fats1 = f1.getFood_name().toUpperCase();
+            String Fats2 = f2.getFood_name().toUpperCase();
+
+            //ascending order
+            return Fats1.compareTo(Fats2);
+        }
+    };
+
+    //Comparator Z to A
+    public static Comparator<Fats> FatComparatorZtoA = new Comparator<Fats>(){
+        public int compare(Fats f1, Fats f2){
+            String Fats1 = f1.getFood_name().toUpperCase();
+            String Fats2 = f2.getFood_name().toUpperCase();
+
+            //descending order
+            return Fats2.compareTo(Fats1);
+        }
+    };
+
+    //Comparator Calories UP
+    public static Comparator<Fats> FatComparatorCalUp = new Comparator<Fats>(){
+        public int compare(Fats f1, Fats f2){
+            double Fats1 = f1.getEnergy_kcal();
+            double Fats2 = f2.getEnergy_kcal();
+
+            //descending order
+            return ((int)Fats1) - ((int)Fats2);
+        }
+    };
+
+    //Comparator Calories DOWN
+    public static Comparator<Fats> FatComparatorCalDown = new Comparator<Fats>(){
+        public int compare(Fats f1, Fats f2){
+            double Fats1 = f1.getEnergy_kcal();
+            double Fats2 = f2.getEnergy_kcal();
+
+            //descending order
+            return ((int)Fats2) - ((int)Fats1);
+        }
+    };
 }

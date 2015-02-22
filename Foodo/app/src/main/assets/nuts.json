@@ -31,7 +31,7 @@
     "energy_kj": 394.0,
     "protein_g": 4.0,
     "carbohydrate_g": 8.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 3.4,
     "total_fat_g": 5.0,
     "saturated_fat_g": 0.8,
@@ -45,7 +45,7 @@
     "phosphorus_mg": 100.0,
     "folate": 47.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "PEANUT BUTTER, NATURAL",
@@ -175,7 +175,7 @@
     "energy_kj": 1181.0,
     "protein_g": 10.0,
     "carbohydrate_g": 40.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 10.3,
     "total_fat_g": 10.0,
     "saturated_fat_g": 3.6,
@@ -189,7 +189,7 @@
     "phosphorus_mg": 204.0,
     "folate": 90.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "TOFU, REGULAR, FIRM AND EXTRA FIRM",
@@ -285,7 +285,7 @@
     "phosphorus_mg": 264.0,
     "folate": 265.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "PEANUT BUTTER, CHUNK TYPE, FAT, SUGAR AND SALT ADDED",
@@ -367,7 +367,7 @@
     "energy_kj": 863.0,
     "protein_g": 6.0,
     "carbohydrate_g": 9.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 3.1,
     "total_fat_g": 18.0,
     "saturated_fat_g": 2.4,
@@ -381,7 +381,7 @@
     "phosphorus_mg": 151.0,
     "folate": 17.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "PISTACHIOS, SHELLED, ROASTED, SALTED",
@@ -451,7 +451,7 @@
     "potassium_mg": 270.0,
     "magnesium_mg": 44.0,
     "phosphorus_mg": 93.0,
-    "folate": null,
+    "folate": 0.0,
     "vitamin_b12_g": 0.0,
     "vitamin_e_mg": 0.0
   },
@@ -463,7 +463,7 @@
     "energy_kj": 829.0,
     "protein_g": 10.0,
     "carbohydrate_g": 37.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 10.4,
     "total_fat_g": 3.0,
     "saturated_fat_g": 1.1,
@@ -477,7 +477,7 @@
     "phosphorus_mg": 202.0,
     "folate": 67.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "BEANS, REFRIED, CANNED",
@@ -501,7 +501,7 @@
     "phosphorus_mg": 160.0,
     "folate": 21.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "BLACK-EYED PEAS, CANNED, NOT DRAINED",
@@ -511,7 +511,7 @@
     "energy_kj": 572.0,
     "protein_g": 8.0,
     "carbohydrate_g": 24.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 5.9,
     "total_fat_g": 1.0,
     "saturated_fat_g": 0.3,
@@ -535,7 +535,7 @@
     "energy_kj": 793.0,
     "protein_g": 14.0,
     "carbohydrate_g": 32.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 5.9,
     "total_fat_g": 1.0,
     "saturated_fat_g": 0.2,
@@ -549,7 +549,7 @@
     "phosphorus_mg": 161.0,
     "folate": 112.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "PEANUT BUTTER, SMOOTH TYPE, LIGHT",
@@ -655,7 +655,7 @@
     "energy_kj": 858.0,
     "protein_g": 5.0,
     "carbohydrate_g": 7.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 1.2,
     "total_fat_g": 19.0,
     "saturated_fat_g": 1.8,
@@ -669,7 +669,7 @@
     "phosphorus_mg": 170.0,
     "folate": 21.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "PUMPKIN AND SQUASH SEEDS, KERNELS, DRIED",
@@ -693,7 +693,7 @@
     "phosphorus_mg": 411.0,
     "folate": 20.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "VEGETABLE PATTY",
@@ -703,7 +703,7 @@
     "energy_kj": 576.0,
     "protein_g": 18.0,
     "carbohydrate_g": 7.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 5.7,
     "total_fat_g": 4.0,
     "saturated_fat_g": 1.0,
@@ -717,7 +717,7 @@
     "phosphorus_mg": 225.0,
     "folate": 22.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "BEANS, BLACK, CANNED, NOT DRAINED",
@@ -727,7 +727,7 @@
     "energy_kj": 676.0,
     "protein_g": 11.0,
     "carbohydrate_g": 29.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 12.2,
     "total_fat_g": 1.0,
     "saturated_fat_g": 0.1,
@@ -751,7 +751,7 @@
     "energy_kj": 948.0,
     "protein_g": 14.0,
     "carbohydrate_g": 43.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 9.3,
     "total_fat_g": 1.0,
     "saturated_fat_g": 0.1,
@@ -775,7 +775,7 @@
     "energy_kj": 884.0,
     "protein_g": 9.0,
     "carbohydrate_g": 40.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 7.8,
     "total_fat_g": 2.0,
     "saturated_fat_g": 0.2,
@@ -813,7 +813,7 @@
     "phosphorus_mg": 144.0,
     "folate": 94.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "PEANUTS, ALL TYPES, SHELLED, OIL-ROASTED, SALTED",
@@ -919,7 +919,7 @@
     "energy_kj": 796.0,
     "protein_g": 6.0,
     "carbohydrate_g": 9.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 0.6,
     "total_fat_g": 16.0,
     "saturated_fat_g": 3.2,
@@ -1063,7 +1063,7 @@
     "energy_kj": 237.0,
     "protein_g": 2.0,
     "carbohydrate_g": 5.0,
-    "total_sugar_g": null,
+    "total_sugar_g": 0.0,
     "total_daietary_fibre_g": 1.3,
     "total_fat_g": 3.0,
     "saturated_fat_g": 0.4,
@@ -1077,7 +1077,7 @@
     "phosphorus_mg": 33.0,
     "folate": 18.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SOYBEANS, BOILED",
@@ -1101,7 +1101,7 @@
     "phosphorus_mg": 312.0,
     "folate": 69.0,
     "vitamin_b12_g": 0.0,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "PEANUTS, ALL TYPES, SHELLED, ROASTED",

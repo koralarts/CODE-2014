@@ -19,9 +19,9 @@
     "potassium_mg": 342.0,
     "phosphorus_mg": 192.0,
     "vitamin_a": 26.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 1.73,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "COD, ATLANTIC, BAKED OR BROILED",
@@ -67,9 +67,9 @@
     "potassium_mg": 68.0,
     "phosphorus_mg": 55.0,
     "vitamin_a": 20.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 0.63,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "MACKEREL, ATLANTIC, BAKED OR BROILED",
@@ -139,7 +139,7 @@
     "potassium_mg": 233.0,
     "phosphorus_mg": 274.0,
     "vitamin_a": 17.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 3.71,
     "vitamin_e_mg": 1.0
   },
@@ -165,7 +165,7 @@
     "vitamin_a": 10.0,
     "vitamin_d_g": 4.2,
     "vitamin_b12_g": 1.3,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SNAPPER, MIXED SPECIES, BAKED OR BROILED",
@@ -211,9 +211,9 @@
     "potassium_mg": 143.0,
     "phosphorus_mg": 145.0,
     "vitamin_a": 9.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 1.86,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SHRIMP, BOILED OR STEAMED",
@@ -235,7 +235,7 @@
     "potassium_mg": 55.0,
     "phosphorus_mg": 41.0,
     "vitamin_a": 20.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 0.45,
     "vitamin_e_mg": 0.4
   },
@@ -309,7 +309,7 @@
     "vitamin_a": 5.0,
     "vitamin_d_g": 0.5,
     "vitamin_b12_g": 0.72,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "GRAYLING, BAKED OR BROILED",
@@ -320,20 +320,20 @@
     "protein_g": 17.0,
     "carbohydrate_g": 0.0,
     "total_fat_g": 1.0,
-    "saturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
-    "dha_g": null,
-    "epa_g": null,
-    "cholesterol_mg": null,
+    "saturated_fat_g": 0.0,
+    "polyunsaturated_fat_g": 0.0,
+    "dha_g": 0.0,
+    "epa_g": 0.0,
+    "cholesterol_mg": 0.0,
     "calcium_mg": 29.0,
     "iron_mg": 0.5,
-    "sodium_mg": null,
-    "potassium_mg": null,
-    "phosphorus_mg": null,
-    "vitamin_a": null,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "vitamin_e_mg": null
+    "sodium_mg": 0.0,
+    "potassium_mg": 0.0,
+    "phosphorus_mg": 0.0,
+    "vitamin_a": 0.0,
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "OCEAN PERCH, ATLANTIC, BAKED OR BROILED",
@@ -355,7 +355,7 @@
     "potassium_mg": 263.0,
     "phosphorus_mg": 208.0,
     "vitamin_a": 11.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 0.86,
     "vitamin_e_mg": 1.2
   },
@@ -499,7 +499,7 @@
     "potassium_mg": 270.0,
     "phosphorus_mg": 142.0,
     "vitamin_a": 20.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 2.38,
     "vitamin_e_mg": 0.8
   },
@@ -571,7 +571,7 @@
     "potassium_mg": 241.0,
     "phosphorus_mg": 184.0,
     "vitamin_a": 11.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 2.1,
     "vitamin_e_mg": 1.0
   },
@@ -621,7 +621,7 @@
     "vitamin_a": 18.0,
     "vitamin_d_g": 3.5,
     "vitamin_b12_g": 1.73,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "POLLOCK, ATLANTIC, BAKED OR BROILED",
@@ -667,7 +667,7 @@
     "potassium_mg": 345.0,
     "phosphorus_mg": 249.0,
     "vitamin_a": 44.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 2.38,
     "vitamin_e_mg": 0.7
   },
@@ -787,7 +787,7 @@
     "potassium_mg": 300.0,
     "phosphorus_mg": 182.0,
     "vitamin_a": 118.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 25.06,
     "vitamin_e_mg": 1.1
   },
@@ -834,10 +834,10 @@
     "sodium_mg": 227.0,
     "potassium_mg": 149.0,
     "phosphorus_mg": 144.0,
-    "vitamin_a": null,
-    "vitamin_d_g": null,
+    "vitamin_a": 0.0,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 1.23,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "ANCHOVIES, CANNED IN OIL, DRAINED SOLIDS",
@@ -872,20 +872,20 @@
     "protein_g": 17.0,
     "carbohydrate_g": 0.0,
     "total_fat_g": 3.0,
-    "saturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
-    "dha_g": null,
-    "epa_g": null,
-    "cholesterol_mg": null,
+    "saturated_fat_g": 0.0,
+    "polyunsaturated_fat_g": 0.0,
+    "dha_g": 0.0,
+    "epa_g": 0.0,
+    "cholesterol_mg": 0.0,
     "calcium_mg": 38.0,
     "iron_mg": 0.5,
     "sodium_mg": 38.0,
     "potassium_mg": 312.0,
     "phosphorus_mg": 188.0,
     "vitamin_a": 0.0,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "vitamin_e_mg": null
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "HALIBUT, ATLANTIC AND PACIFIC, BAKED OR BROILED",
@@ -957,7 +957,7 @@
     "vitamin_a": 11.0,
     "vitamin_d_g": 5.1,
     "vitamin_b12_g": 2.1,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SALMON, EGGS, RAW",
@@ -972,16 +972,16 @@
     "polyunsaturated_fat_g": 2.3,
     "dha_g": 1.17,
     "epa_g": 0.99,
-    "cholesterol_mg": null,
+    "cholesterol_mg": 0.0,
     "calcium_mg": 11.0,
     "iron_mg": 0.6,
     "sodium_mg": 45.0,
     "potassium_mg": 369.0,
     "phosphorus_mg": 198.0,
-    "vitamin_a": null,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "vitamin_e_mg": null
+    "vitamin_a": 0.0,
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SARDINES, PACIFIC, CANNED IN TOMATO SAUCE, DRAINED WITH BONES",
@@ -1040,10 +1040,10 @@
     "protein_g": 15.0,
     "carbohydrate_g": 0.0,
     "total_fat_g": 3.0,
-    "saturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
-    "dha_g": null,
-    "epa_g": null,
+    "saturated_fat_g": 0.0,
+    "polyunsaturated_fat_g": 0.0,
+    "dha_g": 0.0,
+    "epa_g": 0.0,
     "cholesterol_mg": 47.0,
     "calcium_mg": 17.0,
     "iron_mg": 0.3,
@@ -1051,9 +1051,9 @@
     "potassium_mg": 229.0,
     "phosphorus_mg": 124.0,
     "vitamin_a": 9.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 1.91,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "CRAB, CANNED, DRAINED",
@@ -1075,7 +1075,7 @@
     "potassium_mg": 267.0,
     "phosphorus_mg": 185.0,
     "vitamin_a": 1.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 0.33,
     "vitamin_e_mg": 1.3
   },
@@ -1099,7 +1099,7 @@
     "potassium_mg": 104.0,
     "phosphorus_mg": 78.0,
     "vitamin_a": 7.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 13.61,
     "vitamin_e_mg": 0.5
   },
@@ -1149,7 +1149,7 @@
     "vitamin_a": 26.0,
     "vitamin_d_g": 3.6,
     "vitamin_b12_g": 1.3,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "ARCTIC CHAR, BOILED",
@@ -1164,16 +1164,16 @@
     "polyunsaturated_fat_g": 0.9,
     "dha_g": 0.3,
     "epa_g": 0.38,
-    "cholesterol_mg": null,
+    "cholesterol_mg": 0.0,
     "calcium_mg": 23.0,
     "iron_mg": 0.4,
     "sodium_mg": 38.0,
-    "potassium_mg": null,
+    "potassium_mg": 0.0,
     "phosphorus_mg": 188.0,
     "vitamin_a": 68.0,
     "vitamin_d_g": 2.8,
-    "vitamin_b12_g": null,
-    "vitamin_e_mg": null
+    "vitamin_b12_g": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "CISCO (LAKE HERRING, TULLIBEE), RAW",
@@ -1195,9 +1195,9 @@
     "potassium_mg": 319.0,
     "phosphorus_mg": 137.0,
     "vitamin_a": 27.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 0.9,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "COD, ATLANTIC, DRIED AND SALTED, SOAKED IN WATER",
@@ -1280,20 +1280,20 @@
     "protein_g": 17.0,
     "carbohydrate_g": 1.0,
     "total_fat_g": 4.0,
-    "saturated_fat_g": null,
-    "polyunsaturated_fat_g": null,
-    "dha_g": null,
-    "epa_g": null,
-    "cholesterol_mg": null,
+    "saturated_fat_g": 0.0,
+    "polyunsaturated_fat_g": 0.0,
+    "dha_g": 0.0,
+    "epa_g": 0.0,
+    "cholesterol_mg": 0.0,
     "calcium_mg": 45.0,
     "iron_mg": 1.4,
-    "sodium_mg": null,
-    "potassium_mg": null,
-    "phosphorus_mg": null,
+    "sodium_mg": 0.0,
+    "potassium_mg": 0.0,
+    "phosphorus_mg": 0.0,
     "vitamin_a": 72.0,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "vitamin_e_mg": null
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SMELT, BREADED AND FRIED",
@@ -1306,18 +1306,18 @@
     "total_fat_g": 10.0,
     "saturated_fat_g": 2.5,
     "polyunsaturated_fat_g": 2.7,
-    "dha_g": null,
-    "epa_g": null,
+    "dha_g": 0.0,
+    "epa_g": 0.0,
     "cholesterol_mg": 79.0,
     "calcium_mg": 31.0,
     "iron_mg": 1.0,
-    "sodium_mg": null,
+    "sodium_mg": 0.0,
     "potassium_mg": 332.0,
     "phosphorus_mg": 246.0,
     "vitamin_a": 20.0,
-    "vitamin_d_g": null,
-    "vitamin_b12_g": null,
-    "vitamin_e_mg": null
+    "vitamin_d_g": 0.0,
+    "vitamin_b12_g": 0.0,
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "TUNA, LIGHT, CANNED WITH OIL, DRAINED, SALTED",
@@ -1365,7 +1365,7 @@
     "vitamin_a": 8.0,
     "vitamin_d_g": 11.3,
     "vitamin_b12_g": 0.72,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "CRAB, SNOW, BOILED OR STEAMED",
@@ -1387,9 +1387,9 @@
     "potassium_mg": 125.0,
     "phosphorus_mg": 80.0,
     "vitamin_a": 32.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 6.47,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "SCALLOPS, COOKED, STEAMED",
@@ -1435,9 +1435,9 @@
     "potassium_mg": 194.0,
     "phosphorus_mg": 128.0,
     "vitamin_a": 34.0,
-    "vitamin_d_g": null,
+    "vitamin_d_g": 0.0,
     "vitamin_b12_g": 3.56,
-    "vitamin_e_mg": null
+    "vitamin_e_mg": 0.0
   },
   {
     "food_name": "FISH CAKE",
