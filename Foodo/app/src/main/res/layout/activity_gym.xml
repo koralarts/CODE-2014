@@ -19,6 +19,12 @@
         android:orientation="vertical"
         android:layout_weight="70">
 
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/list_divider"
+            android:layout_margin="10dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

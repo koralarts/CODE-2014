@@ -67,9 +67,31 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="title_activity_gym">GymActivity</string>
+    <string name="province_prompt">Filter on Province</string>
+    <string name="gender_prompt">Filter on Gender</string>
     <string name="gym_details">Click here for more details</string>
     <string name="gym_name">Name</string>
     <string name="gym_address">Address</string>
     <string name="gym_gender">Gender</string>
     <string name="gym_phone">Phone Number</string>
+
+    <string-array name="province_array">
+        <item>&lt;Filter on Province&gt;</item>
+        <item>BC</item>
+        <item>AB</item>
+        <item>SK</item>
+        <item>MB</item>
+        <item>ON</item>
+        <item>NB</item>
+        <item>NS</item>
+        <item>NL</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>&lt;Filter on Gender&gt;</item>
+        <item>Coed Club</item>
+        <item>Women\'s Club</item>
+        <item>Coed/Women\'s Club</item>
+    </string-array>
+
 </resources>
