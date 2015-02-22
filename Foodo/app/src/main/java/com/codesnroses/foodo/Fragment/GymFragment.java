@@ -2,12 +2,14 @@ package com.codesnroses.foodo.Fragment;
 
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 //import android.app.Fragment;
 import android.util.Log;
+import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,11 +42,11 @@ import java.util.HashMap;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, AdapterView.OnItemSelectedListener {
+public class GymFragment extends android.support.v4.app.Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, AdapterView.OnItemSelectedListener {
 
     private static final LatLng CANADA = new LatLng(56.130366, -106.346771);
 
-    private GoogleMap map = null;
+    private GoogleMap map;
     private JSONArray clubListArray = null;
     private HashMap<Marker, JSONObject> markerMap = null;
 
@@ -61,6 +63,17 @@ public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleM
     }
 
     @Override
+    public void onDestroyView()
+    {
+        super.onDestroyView();
+
+        Fragment fragment = getActivity().getFragmentManager().findFragmentById(R.id.map);
+        FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();
+        ft.remove(fragment);
+        ft.commit();
+    }
+
+    @Override
     public void onActivityCreated (Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -69,7 +82,10 @@ public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleM
         spinner = (Spinner) getActivity().findViewById(R.id.spinner_gender);
         spinner.setOnItemSelectedListener(this);
 
-        initMap();
+        if(map == null){
+            initMap();
+        }
+
     }
 
     private JSONArray parseClubList() {
