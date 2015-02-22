@@ -8,8 +8,8 @@
     <string name="title_seafood">Seafood</string>
     <string name="title_seeds">Seeds</string>
     <string name="title_sweets">Sweets</string>
-    <string name="title_vegetable">Vegetable</string>
     <string name="title_gym">Gym Locations</string>
+    <string name="title_play">Play</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -37,6 +37,7 @@
         <item>Seeds</item>
         <item>Sweets</item>
         <item>Gym</item>
+        <item>Play</item>
     </string-array>
 
     <!-- Nav Drawer List Item Icons -->
@@ -50,6 +51,7 @@
         <item>@drawable/ic_seeds</item>
         <item>@drawable/ic_sweets</item>
         <item>@drawable/ic_gym</item>
+        <item>@drawable/ic_game</item>
     </array>
 
 
