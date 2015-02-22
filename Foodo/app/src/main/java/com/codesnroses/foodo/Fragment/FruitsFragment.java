@@ -1,20 +1,18 @@
 package com.codesnroses.foodo.Fragment;
 
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-//import android.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.Toast;
+
 
 import com.codesnroses.foodo.Activity.FatsDetail;
 import com.codesnroses.foodo.Adapter.ItemAdapter;
@@ -30,92 +28,82 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+import java.util.regex.Pattern;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FruitsFragment extends Fragment {
+public class FruitsFragment extends Fragment implements SearchView.OnQueryTextListener, AdapterView.OnItemSelectedListener {
 
     private ItemAdapter itemAdapter;
 
     private View rootView;
-    private ArrayList<Fats> fList = new ArrayList<Fats>();
+    private ArrayList<Fats> fullList = new ArrayList<Fats>();
+    private ArrayList<Fats> adapterList = new ArrayList<Fats>();
 
-    private int AtoZToggle = 0; //0 = No sort, 1 = Sorting A to Z, 2 = Sorting Z to A
-    private int CalorieToggle = 0; //0 = No sort, 1 = Sorting lowest to highest, 2 = Sorting highest to lowest
+    private String searchText = "";
 
     public FruitsFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        putFatsObjectIntoList();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_fruits,container,false);
 
         Log.d("Fruits Fragment", "creating fruits fragment now");
 
-        putFatsObjectIntoList();
+        //Put all Fats object into the list View
+        itemAdapter = new ItemAdapter(getActivity(), adapterList);
 
-        catchSort();
+        attachListeners();
+
+        //Set adapter for the list view
+        ListView myItemList = (ListView)rootView.findViewById(R.id.listView_fruits);
+        myItemList.setAdapter(itemAdapter);
+
+        itemAdapter.notifyDataSetChanged();
 
         return rootView;
     }
 
     //Sorting buttons
-    public void catchSort(){
-        Button AtoZButton = (Button)rootView.findViewById(R.id.AtoZSortButton);
-        Button CalorieButton = (Button)rootView.findViewById(R.id.CaloriesSortButton);
+    public void attachListeners(){
+        SearchView search = (SearchView) rootView.findViewById(R.id.search);
+        search.setOnQueryTextListener(this);
+        search.setQuery(searchText, false);
 
-        AtoZButton.setOnClickListener(new View.OnClickListener() {
-            TextView t = (TextView)rootView.findViewById(R.id.AtoZSortButton);
+
+        Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner_sort);
+        spinner.setOnItemSelectedListener(this);
+
+        ListView myItemList = (ListView) rootView.findViewById(R.id.listView_fruits);
+        myItemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                if(AtoZToggle == 0){
-                    Collections.sort(fList, Fats.FatComparatorAtoZ);
-                    AtoZToggle = 1;
-                    t.setText("Z-A");
-                }else if(AtoZToggle == 1){
-                    Collections.sort(fList,Fats.FatComparatorZtoA);
-                    AtoZToggle = 2;
-                    t.setText("A-Z");
-                }else if(AtoZToggle == 2){
-                    Collections.sort(fList,Fats.FatComparatorAtoZ);
-                    AtoZToggle = 1;
-                    t.setText("Z-A");
-                }
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Fats f = (Fats) adapterView.getItemAtPosition(i);
 
-                itemAdapter.notifyDataSetChanged();
-            }
-        });
+                Intent intent = new Intent(rootView.getContext(), FatsDetail.class);
 
-        CalorieButton.setOnClickListener(new View.OnClickListener() {
-            TextView c = (TextView)rootView.findViewById(R.id.CaloriesSortButton);
-            @Override
-            public void onClick(View v) {
-                if(CalorieToggle == 0){
-                    Collections.sort(fList,Fats.FatComparatorCalDown);
-                    CalorieToggle = 1;
-                    c.setText("Calories (Low to High)");
-                }else if(CalorieToggle == 1){
-                    Collections.sort(fList,Fats.FatComparatorCalUp);
-                    CalorieToggle = 2;
-                    c.setText("Calories (High to Low)");
-                }else if(CalorieToggle == 2){
-                    Collections.sort(fList,Fats.FatComparatorCalDown);
-                    CalorieToggle = 1;
-                    c.setText("Calories (Low to High)");
-                }
-
-                itemAdapter.notifyDataSetChanged();
+                String selectedFatsJson = new Gson().toJson(f);
+                intent.putExtra("SelectedItem", selectedFatsJson);
+                startActivity(intent);
             }
         });
     }
 
     public void putFatsObjectIntoList(){
         JSONArray fatObjects = getFatObjects();
-        Log.d("fruits ","there are fruits => "+fatObjects.length());
+
         try{
             //Grab each JSONObject in the JSONArray and parse them into Fats object and
             //add them to a list to be passed into the listView adapter
@@ -137,39 +125,17 @@ public class FruitsFragment extends Fragment {
                 f.setPhosphorus_mg(((JSONObject) fatObjects.get(i)).getDouble("phosphorus_mg"));
                 f.setVitamin_a(((JSONObject) fatObjects.get(i)).getDouble("vitamin_a"));
                 f.setBeta_carotene_g(((JSONObject) fatObjects.get(i)).getDouble("beta_carotene_g"));
-                fList.add(f);
+                adapterList.add(f);
+                fullList.add(f);
             }
         }catch(JSONException e){
             e.printStackTrace();
-            Toast.makeText(getActivity().getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity().getApplicationContext(),"Error: " + e.getMessage(),Toast.LENGTH_LONG).show();
         }
-
-        //Put all Fats object into the list View
-        itemAdapter = new ItemAdapter(getActivity(),fList);
-
-        //Set adapter for the list view
-        ListView myItemList = (ListView)rootView.findViewById(R.id.listView_fruits);
-
-
-        myItemList.setAdapter(itemAdapter);
-        itemAdapter.notifyDataSetChanged();
-
-        myItemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Fats f = (Fats) adapterView.getItemAtPosition(i);
-
-                Intent intent = new Intent(rootView.getContext(), FatsDetail.class);
-
-                String selectedFatsJson = new Gson().toJson(f);
-                intent.putExtra("SelectedItem",selectedFatsJson);
-                startActivity(intent);
-            }
-        });
     }
 
     /**
-     * Reads the fruits.json file and returns the jsonArray object
+     * Reads the fats.json file and returns the jsonArray object
      * @return
      */
     private JSONArray getFatObjects(){
@@ -204,8 +170,64 @@ public class FruitsFragment extends Fragment {
     }
 
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
+    public boolean onQueryTextSubmit(String query) {
+        return false;
     }
 
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        searchText = newText;
+
+        adapterList.clear();
+        if (newText == null || newText.isEmpty()) {
+            adapterList.addAll(fullList);
+        } else {
+            for (Iterator<Fats> it = fullList.iterator(); it.hasNext(); ) {
+                Fats item = it.next();
+                String foodName = item.getFood_name();
+                boolean found = Pattern.compile(Pattern.quote(newText), Pattern.CASE_INSENSITIVE).matcher(foodName).find();
+                if (found) {
+                    adapterList.add(item);
+                }
+            }
+        }
+
+        sortItems();
+
+        itemAdapter.notifyDataSetChanged();
+
+        return false;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        sortItems();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    private void sortItems() {
+        Spinner sortView = (Spinner) rootView.findViewById(R.id.spinner_sort);
+
+        String selectedItem = sortView.getSelectedItem().toString();
+        switch (selectedItem) {
+            case "A-Z":
+                Collections.sort(adapterList, Fats.FatComparatorAtoZ);
+                break;
+            case "Z-A":
+                Collections.sort(adapterList, Fats.FatComparatorZtoA);
+                break;
+            case "Calories (Low to High)":
+                Collections.sort(adapterList, Fats.FatComparatorCalUp);
+                break;
+            case "Calories (High to Low)":
+                Collections.sort(adapterList, Fats.FatComparatorCalDown);
+                break;
+        }
+
+        itemAdapter.notifyDataSetChanged();
+    }
 }

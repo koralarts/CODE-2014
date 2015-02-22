@@ -4,13 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1">
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:id="@+id/listView_sweets"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_weight="0.9"/>
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <View
         android:layout_width="fill_parent"
@@ -19,27 +17,41 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="@color/background"
-        android:weightSum="1"
-        android:layout_weight="0.1">
+        android:weightSum="1">
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_list"
+            android:textStyle="bold"
+            android:textColor="@color/body_text"
+            android:padding="5dp"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/spinner_sort"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="A-Z"
-            android:id="@+id/AtoZSortButton" />
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="Calories (High to Low)"
-            android:id="@+id/CaloriesSortButton" />
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:prompt="@string/sort_list"
+            android:entries="@array/sort_array"/>
+
     </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/list_divider"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/listView_sweets"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"/>
 
 </LinearLayout>
