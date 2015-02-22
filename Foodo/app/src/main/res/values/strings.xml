@@ -32,6 +32,9 @@
     <string name="hello_gym_fragment">Hello gym fragment</string>
 
 
+    <!-- API KEY to namara -->
+    <string name="API_KEY_NAMARA">303a47359480f5bb640a4dce99383092b983137b8128f86b1633b934a8368252</string>
+
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item>Home</item>
@@ -65,11 +68,13 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="title_activity_gym">GymActivity</string>
     <string name="gym_details">Click here for more details</string>
     <string name="gym_name">Name</string>
     <string name="gym_address">Address</string>
     <string name="gym_gender">Gender</string>
     <string name="gym_phone">Phone Number</string>
+    <string name="title_activity_fats_detail">FatsDetail</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

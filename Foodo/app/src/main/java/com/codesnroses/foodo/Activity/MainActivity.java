@@ -30,10 +30,6 @@ import com.codesnroses.foodo.R;
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-
-
-
-
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
