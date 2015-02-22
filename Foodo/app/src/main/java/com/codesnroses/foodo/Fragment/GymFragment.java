@@ -31,6 +31,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,6 +41,7 @@ public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private static final LatLng CANADA = new LatLng(56.130366, -106.346771);
 
     private JSONArray clubListArray = null;
+    private HashMap<Marker, JSONObject> markerMap = new HashMap<Marker, JSONObject>();
 
     public GymFragment() {
     }
@@ -58,11 +60,6 @@ public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleM
         super.onActivityCreated(savedInstanceState);
 
         initMap();
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
     }
 
     private JSONArray parseClubList() {
@@ -110,9 +107,11 @@ public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleM
                 String title = club.getString("publicName");
                 double lat = club.getDouble("latitude");
                 double lng = club.getDouble("longitude");
-                map.addMarker(new MarkerOptions()
+                Marker marker = map.addMarker(new MarkerOptions()
                         .title(title)
+                        .snippet(getResources().getString(R.string.gym_details))
                         .position(new LatLng(lat, lng)));
+                this.markerMap.put(marker, club);
             } catch (JSONException e) {
                 Log.d("JSON Exception", e.toString());
             }
@@ -131,6 +130,11 @@ public class GymFragment extends Fragment implements OnMapReadyCallback, GoogleM
     @Override
     public void onInfoWindowClick(Marker marker) {
         Intent intent = new Intent(getActivity(), GymActivity.class);
+
+        Bundle extras = new Bundle();
+        extras.putString("club", this.markerMap.get(marker).toString());
+        intent.putExtras(extras);
+
         startActivity(intent);
     }
 }
